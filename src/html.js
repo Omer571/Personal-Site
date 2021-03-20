@@ -1,3 +1,5 @@
+/*jshint esversion: 9 */ 
+
 /* eslint-disable react/require-default-props */
 /* eslint-disable react/no-danger */
 /* eslint-disable react/forbid-prop-types */

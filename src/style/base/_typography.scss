@@ -34,6 +34,20 @@ a:hover {
   }
 }
 
+.subtitle {
+  margin: 0px;
+  margin-top: 4.5rem;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @include respond(phone) {
+    font-size: 2.8rem;
+  }
+}
+
+
 .dark-blue-text {
   color: $dark-blue-text !important;
 }

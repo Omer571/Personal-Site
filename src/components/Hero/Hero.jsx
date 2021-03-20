@@ -1,3 +1,5 @@
+/* jshint esversion: 9 */
+
 import React, { useContext, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
@@ -28,6 +30,7 @@ const Header = () => {
           <h1 className="hero-title">
             {title || 'Hi, my name is'}{' '}
             <span className="text-color-main">{name || 'Your Name'}</span>
+            <br />
             <br />
             {subtitle || "I'm the Unknown Developer."}
           </h1>

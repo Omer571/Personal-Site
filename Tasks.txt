@@ -1,0 +1,24 @@
+
+TODO
+
+Make Resume/Add Resume to Website
+Add Picture of self
+Finish up projects and add more in depth stuff about it in github and personal site
+
+COMPLETED TODO
+Add Certification Data
+  - Python MIT
+  - Complete Web Developer
+  - Pictures of Certificates
+  - Fix Certification Pictures after adding pictures
+Set Up Contacts Part w/Email or LinkedIn
+Remove Footer Buttons that aren't useful
+Make a note at top of technologies section
+Add Technology Section
+Add Personal Section
+  - Hobbies
+    - Martial Arts
+    - Lifting
+    - Reading
+    - Language Learning
+Add Certificates Section

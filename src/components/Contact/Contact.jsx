@@ -1,3 +1,5 @@
+/* jshint esversion: 9 */
+
 import React, { useContext } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';

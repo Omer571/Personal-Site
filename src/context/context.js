@@ -1,3 +1,5 @@
+/* jshint esversion: 9 */ 
+
 import React from 'react';
 
 const PortfolioContext = React.createContext();

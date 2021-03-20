@@ -8,8 +8,8 @@ import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
 
-const Projects = () => {
-  const { projects } = useContext(PortfolioContext);
+const Certifications = () => {
+  const { certifications } = useContext(PortfolioContext);
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -25,16 +25,15 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects">
+    <section id="certifications">
       <Container>
-        <div className="project-wrapper">
-          <Title title="Projects" />
-          {projects.map((project) => {
-            const { title, info, info2, url, repo, img, id } = project;
+        <div className="certification-wrapper">
+          <Title title="Certifications" />
 
+          {certifications.map((certification) => {
             return (
-              <Row key={id}>
-                <Col lg={5} sm={12}>
+              <Row>
+                <Col lg={6} sm={12} style={{ height: '300px' }}>
                   <Fade
                     left={isDesktop}
                     bottom={isMobile}
@@ -42,32 +41,25 @@ const Projects = () => {
                     delay={500}
                     distance="30px"
                   >
-                    <div className="project-wrapper__text">
-                      <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
+                    <div className="certification-wrapper__text">
+                      <h3 className="certification-wrapper__text-title">{certification.name || 'certification Title'}</h3>
+                      <br />
+                      <br />
                       <div>
                         <p>
-                          {info ||
+                          {certification.description ||
                             'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
                         </p>
-                        <p className="mb-4">{info2 || ''}</p>
+                        <br />
+                        <p>
+                          {certification.institution ||
+                            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
+                        </p>
                       </div>
-
-                      {repo && (
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="cta-btn cta-btn--hero"
-                          href={repo}
-                        >
-                          Source Code
-                        </a>
-                      )}
                     </div>
                   </Fade>
                 </Col>
-                <Col lg={2} sm={0}>
-                </Col>
-                <Col lg={5} sm={12}>
+                <Col lg={6} sm={12} style={{ height: '300px' }}>
                   <Fade
                     right={isDesktop}
                     bottom={isMobile}
@@ -75,11 +67,11 @@ const Projects = () => {
                     delay={1000}
                     distance="30px"
                   >
-                    <div className="project-wrapper__image">
+                    <div className="certification-wrapper__image">
                       <a
-                        href={url || '#!'}
+                        href={certification.url || '#!'}
                         target="_blank"
-                        aria-label="Project Link"
+                        aria-label="certification Link"
                         rel="noopener noreferrer"
                       >
                         <Tilt
@@ -96,7 +88,7 @@ const Projects = () => {
                           }}
                         >
                           <div data-tilt className="thumbnail rounded">
-                            <ProjectImg alt={title} filename={img} />
+                            <ProjectImg alt={certification.name} filename={certification.img} />
                           </div>
                         </Tilt>
                       </a>
@@ -112,4 +104,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Certifications;
